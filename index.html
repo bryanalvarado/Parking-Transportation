@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7" lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
+<html lang="en" dir="ltr"
+    prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<!--<![endif]-->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        // <![CDATA[
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-798015-1');
+        // ]]>
+    </script>
+    <meta charset="utf-8" />
+    <meta content="77f57c180a73e9e43c205a63969fb769" name="page-id" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta
+        content="Parking &amp; Transportation includes information about parking, directions, parking permits, information boots, and daily parking permit machines."
+        name="description" />
+    <!-- Open Graph / Facebook -->
+    <meta content="website" property="og:type" />
+    <meta content="https://www.csus.edu/index.html" property="og:url" />
+    <meta content="Parking &amp; Transportation" property="og:title" />
+    <meta
+        content="Parking &amp; Transportation includes information about parking, directions, parking permits, information boots, and daily parking permit machines."
+        property="og:description" />
+    <meta
+        content="https://www.csus.edu/newcsus2019-global-assets/_internal/images/logo/primary-vertical/primary_vertical_2_color_gld_hnd.png"
+        property="og:image" />
+    <!-- Twitter -->
+    <meta content="summary_large_image" property="twitter:card" />
+    <meta content="https://www.csus.edu/index.html" property="twitter:url" />
+    <meta content="Parking &amp; Transportation" property="twitter:title" />
+    <meta
+        content="Parking &amp; Transportation includes information about parking, directions, parking permits, information boots, and daily parking permit machines."
+        property="twitter:description" />
+    <meta
+        content="https://www.csus.edu/newcsus2019-global-assets/_internal/images/logo/primary-vertical/primary_vertical_2_color_gld_hnd.png"
+        property="twitter:image" />
+    <title>Parking &amp; Transportation | Sacramento State</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" media="screen"
+        rel="stylesheet" type="text/css" />
+    <link crossorigin="anonymous" href="https://fonts.googleapis.com/css?family=Open+Sans:i,300,400,600,700"
+        integrity="" media="screen" rel="stylesheet" type="text/css" />
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" media="screen"
+        rel="stylesheet" type="text/css" />
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css" integrity=""
+        media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www.csus.edu/newcsus2019-global-assets/_internal/css/all.css" id="css-all" media="screen"
+        rel="stylesheet" type="text/css" />
+    <link href="https://www.csus.edu/newcsus2019-global-assets/_internal/css/print-override.css" id="css-print-override"
+        media="print" rel="stylesheet" type="text/css" />
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 600px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+
+        /*input-panel css settings */
+        #input-panel {
+            position: absolute;
+            top: 10px;
+            left: 25%;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: "Roboto", "sans-serif";
+            line-height: 30px;
+            padding-left: 10px;
+
+        }
+
+        #output {
+            position: absolute;
+            top: 80px;
+            left: 4%;
+            z-index: 5;
+            background-color: #fff;
+            padding: 11px;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: "Roboto", "sans-serif";
+            line-height: 30px;
+            padding-left: 40px;
+
+
+        }
+    </style>
+</head>
+
+<body style="background: linear-gradient(0deg, rgba(0,78,56), rgba(0,132,83))">
+    <main class="t3 page-parking-transportation " id="skip">
+        <header class="bg-image-full">
+            <style>
+                /* Large devices (laptops/desktops, 992px and up) */
+                @media only screen and (min-width: 992px) {
+                    .bg-image-full {
+                        background-image: linear-gradient(90deg, rgba(196, 182, 129, 0) 50%, rgba(0, 78, 56, 0.6) 50%, rgba(0, 78, 56, 1) 100%), url('structurev-2000.jpg');
+                    }
+                }
+            </style>
+            <style>
+                /* Small devices (991px and down) */
+                @media only screen and (max-width: 991px) {
+                    main:not(.t1) .bg-image-full {
+                        background-image: linear-gradient(270deg, rgba(0, 78, 56, 0.3) 5%, rgba(0, 78, 56, .6) 100%), url('structurev-2000.jpg');
+                    }
+
+                    main.t1 .bg-image-full {
+                        background-image: url('structurev-2000.jpg');
+                    }
+                }
+            </style>
+            <div class="container">
+                <div class="row">
+                    <!-- T3 Hero Header -->
+                    <div class="col-lg-6 offset-lg-6">
+                        <h1 class="text-right">Campus Commute Options
+                            <span>California State University, Sacramento</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--***** END: Hero Section *****-->
+
+        <script id="navbar">
+            function openCommute(commuteType) {
+                var i;
+                var x = document.getElementsByClassName("col-md-12");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                document.getElementById('home').style.display = "block";
+                document.getElementById(commuteType).style.display = "block";
+                if (commuteType == 'home') {
+                    document.getElementById('chartrow').style =
+                        "padding-left:2vw; padding-right:2vw; display: in-line block";
+                } else {
+                    document.getElementById('chartrow').style.display = "none";
+                }
+            }
+
+            function newMode(commuteType) {
+                var mode = document.getElementById("mode");
+                const selectElement = document.querySelector('mode');
+                switch (commuteType) {
+                    case 'home':
+                        mode.value = "DRIVING";
+                        break;
+                    case 'bicycle':
+                        mode.value = "BICYCLING";
+                        break;
+                    case 'sacrt':
+                        mode.value = "TRANSIT";
+                        break;
+                    case 'rideshare':
+                        mode.value = "DRIVING";
+                        break;
+                    case 'sov':
+                        mode.value = "DRIVING";
+                        break;
+                    case 'mov':
+                        mode.value = "DRIVING";
+                        break;
+                    case 'motorcycle':
+                        mode.value = "DRIVING";
+                        break;
+                    case 'walking':
+                        mode.value = "WALKING";
+                        break;
+                }
+                var event = new Event('change');
+                mode.dispatchEvent(event);
+            }
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2ObxtSo47Ml9VfiF_cmwq5F-jFLPmA9s&callback=initMap&libraries=&v=weekly"
+            defer></script>
+        <script id="map stuff">
+            var distances = [0, 0, 0, 0, 0, 0, 0];
+            var times = [0, 0, 0, 0, 0, 0, 0];
+            var costs = [0, 0, 0, 0, 0, 0, 0];
+
+            function initMap() {
+                const directionsRenderer = new google.maps.DirectionsRenderer();
+                const directionsService = new google.maps.DirectionsService();
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 14,
+                    center: {
+                        lat: 37.77,
+                        lng: -122.447
+                    },
+                });
+                directionsRenderer.setMap(map);
+                directionsRenderer.setPanel(document.getElementById('directionsPanel'));
+
+                document.getElementById("submit").onclick = function () {
+                    calculateAndDisplayRoute(directionsService, directionsRenderer);
+                };
+
+                document.getElementById("mode").addEventListener("change", () => {
+                    calculateAndDisplayRoute(directionsService, directionsRenderer);
+                });
+            }
+
+            function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+
+                const start = document.getElementById("start").value;
+                const selectedMode = document.getElementById("mode").value;
+                const destination = {
+                    lat: 38.5613,
+                    lng: -121.4241
+                };
+
+                var service = new google.maps.DistanceMatrixService();
+
+                service.getDistanceMatrix({
+                    origins: [start],
+                    destinations: [destination],
+                    travelMode: "DRIVING",
+                    unitSystem: google.maps.UnitSystem.METRIC,
+                }, callback1);
+                service.getDistanceMatrix({
+                    origins: [start],
+                    destinations: [destination],
+                    travelMode: "BICYCLING",
+                    unitSystem: google.maps.UnitSystem.METRIC,
+                }, callback2);
+                service.getDistanceMatrix({
+                    origins: [start],
+                    destinations: [destination],
+                    travelMode: "TRANSIT",
+                    unitSystem: google.maps.UnitSystem.METRIC,
+                }, callback3);
+                service.getDistanceMatrix({
+                    origins: [start],
+                    destinations: [destination],
+                    travelMode: "WALKING",
+                    unitSystem: google.maps.UnitSystem.METRIC,
+                }, callback4);
+
+                directionsService.route({
+                        origin: start,
+                        destination: {
+                            lat: 38.5613,
+                            lng: -121.4241
+                        },
+                        // Note that Javascript allows us to access the constant
+                        // using square brackets and a string value as its
+                        // "property."
+                        travelMode: google.maps.TravelMode[selectedMode],
+                    },
+                    (response, status) => {
+                        if (status == "OK") {
+                            directionsRenderer.setDirections(response);
+
+                        } else {
+                            window.alert("Directions request failed due to " + status);
+                        }
+                    }
+                );
+            }
+
+            function precise(x) {
+                return Number.parseFloat(x).toPrecision(3);
+            }
+
+            function callback1(response, status) {
+                if (status == 'OK') {
+                    var origins = response.originAddresses;
+                    var destinations = response.destinationAddresses;
+
+                    for (var i = 0; i < origins.length; i++) {
+                        var results = response.rows[i].elements;
+                        for (var j = 0; j < results.length; j++) {
+                            var element = results[j];
+                            var distance = element.distance.value;
+                            var duration = element.duration.value;
+                            var from = origins[i];
+                            var to = destinations[j];
+                        }
+                    }
+                    distance = distance * 0.0006214;
+                    distances[2] = precise(distance);
+                    distances[3] = precise(distance);
+                    distances[4] = precise(distance);
+                    distances[5] = precise(distance);
+                    duration = Math.floor(duration / 60);
+                    times[2] = duration;
+                    times[3] = duration;
+                    times[4] = duration;
+                    times[5] = duration;
+                    calculateCosts(costs, distances, times);
+                    // document.getElementById("output").innerHTML = distance;
+                    refresh(chart1);
+                    refresh(chart2);
+                    refresh(chart3);
+                }
+            }
+
+            function callback2(response, status) {
+                if (status == 'OK') {
+                    var origins = response.originAddresses;
+                    var destinations = response.destinationAddresses;
+
+                    for (var i = 0; i < origins.length; i++) {
+                        var results = response.rows[i].elements;
+                        for (var j = 0; j < results.length; j++) {
+                            var element = results[j];
+                            var distance = element.distance.value;
+                            var duration = element.duration.value;
+                            var from = origins[i];
+                            var to = destinations[j];
+                        }
+                    }
+                    distance = distance * 0.0006214;
+                    distances[0] = precise(distance);
+                    duration = Math.floor(duration / 60);
+                    times[0] = duration;
+                    calculateCosts(costs, distances, times);
+                    // document.getElementById("output").innerHTML = distance;
+                    refresh(chart1);
+                    refresh(chart2);
+                    refresh(chart3);
+                }
+            }
+
+            function callback3(response, status) {
+                if (status == 'OK') {
+                    var origins = response.originAddresses;
+                    var destinations = response.destinationAddresses;
+
+                    for (var i = 0; i < origins.length; i++) {
+                        var results = response.rows[i].elements;
+                        for (var j = 0; j < results.length; j++) {
+                            var element = results[j];
+                            var distance = element.distance.value;
+                            var duration = element.duration.value;
+                            var from = origins[i];
+                            var to = destinations[j];
+                        }
+                    }
+                    distance = distance * 0.0006214;
+                    distances[1] = precise(distance);
+                    duration = Math.floor(duration / 60);
+                    times[1] = duration;
+                    calculateCosts(costs, distances, times);
+                    // document.getElementById("output").innerHTML = distance;
+                    refresh(chart1);
+                    refresh(chart2);
+                    refresh(chart3);
+                }
+            }
+
+            function callback4(response, status) {
+                if (status == 'OK') {
+                    var origins = response.originAddresses;
+                    var destinations = response.destinationAddresses;
+
+                    for (var i = 0; i < origins.length; i++) {
+                        var results = response.rows[i].elements;
+                        for (var j = 0; j < results.length; j++) {
+                            var element = results[j];
+                            var distance = element.distance.value;
+                            var duration = element.duration.value;
+                            var from = origins[i];
+                            var to = destinations[j];
+                        }
+                    }
+                    distance = distance * 0.0006214;
+                    distances[6] = precise(distance);
+                    duration = Math.floor(duration / 60);
+                    times[6] = duration;
+                    calculateCosts(costs, distances, times);
+                    // document.getElementById("output").innerHTML = distance;
+                    refresh(chart1);
+                    refresh(chart2);
+                    refresh(chart3);
+                }
+            }
+        </script>
+        <script id="calc metrics">
+            function calculateCosts(costs, distances, times) {
+                var semestermiles = [0, 0, 0, 0, 0, 0, 0];
+                for (var i = 0; i < semestermiles.length; i++) {
+                    semestermiles[i] = distances[i] * 2 * 4 * 16;
+                }
+                /* bicycling */
+                costs[0] = 50;
+
+                /* sacrt */
+                costs[1] = 5;
+
+                /* rideshare */
+                const ridepass = 20;
+                const avgridecost = 2;
+                costs[2] = ridepass * 5 + avgridecost * 2 * 4 * 16;
+
+                /* sov */
+                const sovpermit = 178;
+                const sovcostpermile = 0.82;
+                costs[3] = sovpermit + sovcostpermile * semestermiles[3];
+
+                /* mov */
+                const movpermit = 89;
+                const movcostpermile = 0.82;
+                costs[4] = movpermit + movcostpermile * semestermiles[4];;
+
+                /* motorcycle */
+                const motpermit = 44;
+                const motcostpermile = 0.2;
+                costs[5] = motpermit + motcostpermile * semestermiles[5];
+
+                /* walking */
+                costs[6] = 5;
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"> </script>
+        <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+
+        <section id="page content" style="width:100%;">
+            <div id="commute-grid" class="row no-gutters degrees">
+                <div class="col-md-3 q-row-1">
+                    <a href="javascript:void(0)" onclick="newMode('home'); openCommute('home');">Home</a>
+                </div>
+                <div class="col-md-3 q-row-1">
+                    <a href="javascript:void(0)" onclick="newMode('bicycle'); openCommute('bicycle');">Bicycle</a>
+                </div>
+                <div class="col-md-3 q-row-1">
+                    <a href="javascript:void(0)" onclick="newMode('sacrt'); openCommute('sacrt');">Sacramento Regional
+                        Transit</a>
+                </div>
+                <div class="col-md-3 q-row-1">
+                    <a href="javascript:void(0)" onclick="newMode('rideshare'); openCommute('rideshare');">Rideshare</a>
+                </div>
+                <div class="col-md-3 q-row-1">
+                    <a href="javascript:void(0)" onclick="newMode('sov'); openCommute('sov');">Single-Occupant
+                        Vehicle</a>
+                </div>
+                <div class="col-md-3 q-row-1">
+                    <a href="javascript:void(0)" onclick="newMode('mov'); openCommute('mov');">Multi-Occupant
+                        Vehicle</a>
+                </div>
+                <div class="col-md-3 q-row-1">
+                    <a href="javascript:void(0)"
+                        onclick="newMode('motorcycle'); openCommute('motorcycle');">Motorcycle</a>
+                </div>
+                <div class="col-md-3 q-row-1">
+                    <a href="javascript:void(0)" onclick="newMode('walking'); openCommute('walking');">Walking</a>
+                </div>
+            </div>
+            <div id="instructions" style="width: 100%; text-align: center;">
+                <h1 style="width: 100%; text-align: center; color: #fff">Enter your address to start</h1>
+            </div>
+            <div id="body content" class="row no-gutters">
+                <div id="map content" class="row no-gutters" style="flex: 50%">
+                    <div id="home" class="col-md-12" style="flex: 50%; display:block">
+                        <div class="row no-gutters" style="display: flex">
+                            <select id="mode" style="display:none">
+                                <option value="DRIVING">Driving</option>
+                                <option value="BICYCLING">Bicycling</option>
+                                <option value="TRANSIT">Transit</option>
+                                <option value="WALKING">Walking</option>
+                            </select>
+                            <div id="input-panel">
+                                <input id="start" type="text" value="" placeholder="Enter address">
+                                <input id="submit" type="button" value="Search">
+                            </div>
+                            <div id="map" style="width:70%"></div>
+                            <div id="directionsPanel"
+                                style="width:30%; height:600px; background-color:#FFFFFF; overflow-y:auto"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bicycle" class="col-md-12" style="flex: 50%; display:none">
+                    <div class="box1" style="width: 100%; margin: 0 auto">
+                        <section>
+                            <h2>Bicycle</h2>
+                            <p>CSUS supports bicycle commuters in a number of ways.</p>
+                            <p>Bicycles are permitted on all campus roadways. Bicycles are <b>not</b> permitted on
+                                walking
+                                paths and sidewalks.</p>
+                            <dl>
+                                <dt>Bike compounds</dt>
+                                <dd>
+                                    <p>Three bike compounds are staffed by Sacramento State Police Department Community
+                                        Service Officers during the school week.</p>
+                                </dd>
+                                <ul>
+                                    <li>Monday - Thursday: 8:00am - 10:00pm</li>
+                                    <li>Friday: 8:00am - 5:00pm</li>
+                                </ul>
+                                <dt>Bike racks</dt>
+                                <dd>
+                                    <p>Bike racks are conveniently placed throughout campus. Bike commuters can ride
+                                        almost
+                                        all the way to their classroom buildings.</p>
+                                </dd>
+                                <dt>Estimated costs</dt>
+                                <ul>
+                                    <li>Bicycle: $400-$700</li>
+                                    <li>Lock, helmet, & other accessories: $150</li>
+                                    <li>Annual Maintenance: $100</li>
+                                    <li>Registration: Free</li>
+                                    <li>Fuel: Free</li>
+                                </ul>
+                                <dt>Carbon Offset & Emissions</dt>
+                                <dd>
+                                    <p>Bicycles are excellent green vehicles in that they have a very minimal carbon
+                                        footprint.</p>
+                                    <ul>
+                                        <li>
+                                            Production: 0.5 ounces of CO2
+                                        </li>
+                                        <li>
+                                            Operation: 0.9 ounces of CO2 per mile (from the food to fuel the rider)
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>Registration</dt>
+                                <dd>
+                                    <p>The Sacramento State Police Department can register your bicycle, which can aid
+                                        in
+                                        recovering the bike in the event it is lost or stolen. To register your bicycle,
+                                        you
+                                        will need to take the Sacramento State Police Department Bicycle Registration
+                                        form,
+                                        along with your bike, to a Campus bike compound; or, to the Police Department,
+                                        to
+                                        complete the bike registration process. A registration sticker will be placed on
+                                        your bike.</p>
+                                </dd>
+                                <p><a class="button-default"
+                                        href="https://www.csus.edu/campus-safety/police-department/units-functions/_internal/_documents/bike-register-form.pdf">Register
+                                        Your Bicycle</a></p>
+                            </dl>
+                            <img src="../bikepaths.jpg"></img>
+                        </section>
+                    </div>
+                </div>
+                <div id="sacrt" class="col-md-12" style="flex: 50%; display:none">
+                    <div class="box1" style="width: 100%; margin: 0 auto">
+                        <section>
+                            <h2>Public Transit Sleeve (Sac RT)</h2>
+                            <p>Sacramento Regional Transit (RT) services the Greater Sacramento Area and has several
+                                buses that arrive at and depart from Sacramento State throughout the day.</p>
+                            <p>Students may ride all Sacramento Regional Transit (RT) fixed-route transit services,
+                                including the light rail, by presenting a valid Sacramento State OneCard and the student
+                                commuter sleeve. Students pay a nominal fee for this service through their registration
+                                fees.</p>
+                            <p>Sac State employees may ride all Sacramento Regional Transit (RT) fixed-route transit
+                                services, including the light rail, by presenting a valid Sacramento State OneCard and
+                                the employee commuter sleeve. Employees may purchase a 6-month employee commuter sleeve
+                                for $40 for the periods January 1-June 30 and July 1-December 31.</p>
+                            <p>Students and employees can get discounted rates on transit by obtaining a commuter sleeve
+                                from:</p>
+                            <ul class="ul-button-stack">
+                                <p><a class="button-default"
+                                        href="https://www.csus.edu/administration-business-affairs/financial-services/index.html">The
+                                        Bursar's Office</a></p>
+                                <p><a class="button-default"
+                                        href="https://www.csus.edu/parking-transportation/index.html">The
+                                        UTAPS Office</a>
+                                </p>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <div id="rideshare" class="col-md-12" style="flex: 50%; display:none">
+                    <div class="box1" style="width: 100%; margin: 0 auto">
+                        <section>
+                            <h2>Rideshare</h2>
+                            <p>Rideshare services are great for those that intermittently, as a one-off, need a quick
+                                trip
+                                to campus.</p>
+                            <dl>Bikes & Scooters</dl>
+                            <ul>
+                                <li>
+                                    <p><a href='https://www.li.me/en-US/home/'>Lime</a> - "Rethink Your Ride with Lime,
+                                        the
+                                        global leader in micromobility. We offer electric scooter and bike rentals in
+                                        over
+                                        100 countries around the world, helping connect communities, reduce pollution
+                                        and
+                                        provide accessible transportation options to millions of riders every day."</p>
+                                </li>
+                                <a href="https://apps.apple.com/us/app/lime-your-ride-anytime/id1199780189?itsct=apps_box&amp;itscg=30200"
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 125px; height: 41px;"><img
+                                        src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-US?size=250x83&amp;releaseDate=1494288000&h=cb13d40b9e4c9df19505f7ee9cf868d3"
+                                        alt="Download on the App Store"
+                                        style="border-radius: 13px; width: 125px; height: 41px;"></a>
+                                <a href='https://play.google.com/store/apps/details?id=com.limebike&hl=en_US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 167px; height: 50px;"><img
+                                        alt='Get it on Google Play'
+                                        style="border-radius: 13px; width: 167px; height: 60px;"
+                                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+                                <br><br>
+                                <li>
+                                    <p><a href='https://www.bird.co/'>Bird</a> - "Bird is a reliable last mile electric
+                                        scooter rental service. Our mission is to make cities more livable by reducing
+                                        car
+                                        usage, traffic, and congestion."</p>
+                                </li>
+                                <a href="https://apps.apple.com/us/app/bird-be-free-enjoy-the-ride/id1260842311?itsct=apps_box&amp;itscg=30200"
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 125px; height: 41px;"><img
+                                        src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-US?size=250x83&amp;releaseDate=1505088000&h=d5f377c96c0986b183a1efddc7905d3c"
+                                        alt="Download on the App Store"
+                                        style="border-radius: 13px; width: 125px; height: 41px;"></a>
+                                <a href='https://play.google.com/store/apps/details?id=co.bird.android&hl=en_US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 167px; height: 50px;"><img
+                                        alt='Get it on Google Play'
+                                        style="border-radius: 13px; width: 167px; height: 60px;"
+                                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+                                <br><br>
+                                <li>
+                                    <p><a href='https://www.spin.app/'>Spin</a> - "Spin provides your community with
+                                        dockless scooter rental options to get where you need to go."</p>
+                                </li>
+                                <a href="https://apps.apple.com/us/app/spin-electric-scooters/id1241808993?itsct=apps_box&amp;itscg=30200"
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 125px; height: 41px;"><img
+                                        src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-US?size=250x83&amp;releaseDate=1498003200&h=7c6b5fc4590a5be9ad79eeee01bcffd8"
+                                        alt="Download on the App Store"
+                                        style="border-radius: 13px; width: 125px; height: 41px;"></a>
+                                <a href='https://play.google.com/store/apps/details?id=pm.spin&hl=en_US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 167px; height: 50px;"><img
+                                        alt='Get it on Google Play'
+                                        style="border-radius: 13px; width: 167px; height: 60px;"
+                                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+                            </ul>
+                            <dl>Cars</dl>
+                            <ul>
+                                <li>
+                                    <p><a href='https://www.uber.com/us/en/ride/'> Uber</a> - "Know where you&#x27;re
+                                        going
+                                        but need a ride? Sign up today and start requesting rides with Uber. Need to
+                                        know
+                                        how much a ride is going to cost? Use our price estimator resource."</p>
+                                </li>
+                                <a href="https://apps.apple.com/us/app/uber-request-a-ride/id368677368?itsct=apps_box&amp;itscg=30200"
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 125px; height: 41px;"><img
+                                        src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-US?size=250x83&amp;releaseDate=1274400000&h=3edcbd03361c0fc741cf2a747029f0c4"
+                                        alt="Download on the App Store"
+                                        style="border-radius: 13px; width: 125px; height: 41px;"></a>
+                                <a href='https://play.google.com/store/apps/details?id=com.ubercab&hl=en_US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 167px; height: 50px;"><img
+                                        alt='Get it on Google Play'
+                                        style="border-radius: 13px; width: 167px; height: 60px;"
+                                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+                                <br><br>
+                                <li>
+                                    <p><a href='https://www.lyft.com/rider'> Lyft</a> - "Rideshare with Lyft. Lyft is
+                                        your
+                                        friend with a car, whenever you need one. Download the app and get a ride from a
+                                        friendly driver within minutes."</p>
+                                </li>
+                                <a href="https://apps.apple.com/us/app/lyft/id529379082?itsct=apps_box&amp;itscg=30200"
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 125px; height: 41px;"><img
+                                        src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-US?size=250x83&amp;releaseDate=1338422400&h=f06c51f0c90e471d524678f83d0eb856"
+                                        alt="Download on the App Store"
+                                        style="border-radius: 13px; width: 125px; height: 41px;"></a>
+                                <a href='https://play.google.com/store/apps/details?id=me.lyft.android&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+                                    style="display: inline-block; overflow: hidden; border-radius: 13px; width: 167px; height: 50px;"><img
+                                        alt='Get it on Google Play'
+                                        style="border-radius: 13px; width: 167px; height: 60px;"
+                                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <div id="sov" class="col-md-12" style="flex: 50%; display:none">
+                    <div class="box1" style="width: 100%; margin: 0 auto">
+                        <section>
+                            <h2 id="parking-on-campus-generic-quadrant1"
+                                title="Anchor is: parking-on-campus-generic-quadrant1">Parking on Campus</h2>
+                            <p>UTAPS provides a variety of resources to make finding and paying for parking easier.</p>
+                            <p>Parking at Sacramento State requires a permit at all times. California State laws and
+                                Sacramento State parking regulations that pertain to parking are enforced 24 hours per
+                                day, 365 days per year.</p>
+                            <p>Parking Enforcement Officers patrol campus <strong>24 hours a day</strong></p>
+                            <p><a class="button-cta" href="https://sacstate.t2hosted.com/per/index.aspx">Purchase
+                                    Permit</a></p>
+                            <p><a class="button-cta"
+                                    href="https://www.csus.edu/parking-transportation/parking/permit-pricing.html"
+                                    target="_parent">Permit Pricing Table</a></p>
+                            <p><a class="button-cta" href="https://sacstate.t2hosted.com/Account/Portal">Online Citation
+                                    Payments &amp; Appeals</a></p>
+                            <p><a class="button-cta" href="spotlights/how-to-register-your-license-plate.html">Update
+                                    Vehicle Information</a></p>
+                            <img src="../parking.png" width="100%" height="100%" style="object-fit: contain;"></img>
+                        </section>
+                    </div>
+                </div>
+                <div id="mov" class="col-md-12" style="flex: 50%; display:none">
+                    <div class="box1" style="width: 100%; margin: 0 auto">
+                        <section>
+                            <h2>Multi-Occupant Vehicle</h2>
+                            <p>Sacramento State Transportation & Parking Services encourages all students and
+                                employees to participate in carpooling, another great alternative commute mode.</p>
+                            <dl>
+                                <dt>Carpooling</dt>
+                                <dd>Benefits of Carpooling</dd>
+                                <ul>
+                                    <li>Split the cost of their permit with one or more other commuters,</li>
+                                    <li>Get access to prime carpool parking spaces,</li>
+                                    <li>Protect the environment and help reduce traffic congestion,</li>
+                                    <li>Earn rewards through Sacramento Region Commuter Club</li>
+                                </ul>
+                                <p>Carpool spaces are located in Parking Structures 1, 3 and 5.</p>
+                                <dd>Carpool Permit</dd>
+                                <p>To obtain a Sacramento State carpool parking permit, all members of the carpool must
+                                    come to the UTAPS office with their Sacramento State semester parking permit (if
+                                    already purchased) to exchange it and to complete a carpool application.</p>
+                                <ul>
+                                    <li>Please prepare to have all vehicle license plate numbers for the vehicles that
+                                        will potentially be used in your carpool.</li>
+                                    <li>Only one (1) carpool parking permit will be issued per carpool.</li>
+                                    <li>Carpool parking permits are obtained on a semester basis.</li>
+                                    <li>Carpools at Sacramento State must include at least two (2) people.</li>
+                                    <li>At least two members of the carpool must be in the vehicle when parking in
+                                        carpool spaces.</li>
+                                    <li>Carpool permits are also valid in regular student or employee parking spaces,
+                                        depending on your carpool permit designation.</li>
+                                    <li>Vehicles must be parked in non-carpool parking spaces when driving to campus
+                                        alone and displaying a carpool permit.</li>
+                                </ul>
+                                <p>Carpool spaces are available for carpoolers during the Fall and Spring semester. At
+                                    all other times, carpool spaces are available to vehicles with any valid Sac State
+                                    parking permit.</p>
+
+                                <p><a class="button-default"
+                                        href="https://www.csus.edu/administration-business-affairs/_internal/_documents/aba-pdfs/carpool-form1.pdf">Carpool
+                                        Parking Form</a></p>
+                            </dl>
+                            <img src="../parking2.png" width="100%" height="100%" style="object-fit: contain;"></img>
+                        </section>
+                    </div>
+                </div>
+                <div id="motorcycle" class="col-md-12" style="flex: 50%; display:none">
+                    <div class="box1" style="width: 100%; margin: 0 auto">
+                        <section>
+                            <h2>Motorcycle</h2>
+                            <p>A motorcycle-only adhesive parking permit must be placed in an easily visible location on
+                                the fender, fork or gas tank. Placing the adhesive motorcycle permit elsewhere on the
+                                motorcycle may result in a parking citation. This adhesive permit is valid only in
+                                motorcycle spaces. </p>
+                            <p>As an alternative to purchasing a motorcycle-only parking permit, people who drive a
+                                car/truck and ride motorcycles may purchase a repositionable parking permit. The
+                                repositionable permit may be displayed in a vehicle or on a motorcycle. This
+                                repositionable permit allows a motorcycle to be parked legally in a motorcycle OR
+                                regular vehicle parking space. It is the parking permit holder's responsibility to
+                                ensure the security of the parking permit. A clear, plastic parking permit case can be
+                                purchased, at the UTAPS office, for displaying the repositionable parking permit on a
+                                motorcycle.</p>
+                            <img src="../parking2.png" width="100%" height="100%" style="object-fit: contain;"></img>
+                        </section>
+                    </div>
+                </div>
+                <div id="walking" class="col-md-12" style="flex: 50%; display:none">
+                    <div class="box1" style="width: 100%; margin: 0 auto">
+                        <section>
+                            <h2>Walking</h2>
+                            <p>The Healthy Hornet Path is the biggest component of the activity commitment. Users can
+                                jump in anywhere along the route, although distance markers are laid out in quarter-mile
+                                increments starting north of The WELL.</p>
+                            <p>Pedestrians using the Healthy Hornet Path will pass by such campus landmarks as the
+                                Ernest E. Tschannen Science Complex, University Union expansion, Guy West Bridge, the
+                                grassy North Quad, John Smith Baseball Field, Hornet Stadium, and Broad Fieldhouse.</p>
+                            <p>The pathway was conceived and implemented by Facilities Management, UTAPS (University
+                                Transportation, Parking and Support Services), University Print & Mail, and SHCS.</p>
+                            <p>Sac State has completed 11 of 23 Healthier Campus Initiative commitments, including a
+                                subsidized bicycle-purchase program (at Peak Adventures); cooking-skills classes for
+                                students that incorporate fresh fruit and vegetables; free water in all dining,
+                                recreational, and educational facilities, and personal nutrition assessments and
+                                counseling for students.</p>
+                            <p>By June 2021, the University plans to complete 12 additional commitments, including an
+                                annual integrated, comprehensive wellness program; a campus-wide program that encourages
+                                public transportation; and more local, sustainable food available on campus.</p>
+                            <p>In addition to the pathway dedication, these activities are scheduled for Healthy Campus
+                                Week. All take place at The WELL:</p>
+                            <ul>
+                                <li>5-6 p.m. Monday, Sept. 23 – Yoga, on the lawn.</li>
+                                <li>10:30 a.m.-noon Tuesday, Sept. 24 – Nap Class, in the Feather Studio.</li>
+                                <li>2-3 p.m. Wednesday, Sept. 25 – Mindful Meditation, in the Cove.</li>
+                                <li>Noon-1 p.m. Thursday, Sept. 26 – Cook Out Your Cravings cooking demonstration, in
+                                    the Cove.</li>
+                                <li>4:30-7:30 p.m. Thursday, Sept. 26 – Condom Cart, in the lobby.</li>
+                            </ul>
+                            <p>The campus community is invited to participate in the Fruit n’ Veggie Friday Social Media
+                                Challenge, on Sept. 27. Participants post a photo of themselves eating a colorful fruit
+                                or vegetable, using the hashtags #FNVFriday and #SacStateHealth.</p>
+                            <p>"Sacramento State's Healthy Campus Week encourages our students to take care of
+                                themselves and to participate in health-promoting behaviors," said Nicole Burdock, the
+                                SHCS student assistant who helped plan the events. "We are excited to dedicate a week to
+                                help our hard-working students practice self-care."</p>
+                            <img src="../hhpath.png" width="100%" height="100%" style="object-fit: contain;"></img>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div id="chartrow" class="row" style="padding-left:2vw; padding-right:2vw; display: in-line block">
+                <div class="chart-container" style="position: relative; height:40vh; width:32vw">
+                    <canvas id="homecharts1"></canvas>
+                </div>
+                <div class="chart-container" style="position: relative; height:40vh; width:32vw">
+                    <canvas id="homecharts2"></canvas>
+                </div>
+                <div class="chart-container" style="position: relative; height:40vh; width:32vw">
+                    <canvas id="homecharts3"></canvas>
+                </div>
+                <script id="chart1">
+                    var utils = Samples.utils;
+
+                    function colorize(opaque, ctx) {
+                        var v = ctx.dataset.data[ctx.dataIndex];
+                        var c = v <= 3 ? '#44DE28' :
+                            v <= 6 ? '#0358B6' :
+                            v <= 10 ? '#F46300' :
+                            '#D60000';
+
+                        return opaque ? c : utils.transparentize(c, 1 - Math.abs(v / 10));
+                    }
+                    var data1 = {
+                        labels: ['Bicycle', 'SacRT', 'Rideshare', 'SOV', 'MOV', 'Motorcycle', 'Walking'],
+                        datasets: [{
+                            label: 'Miles',
+                            data: distances
+                        }]
+                    };
+                    var options1 = {
+                        legend: false,
+                        tooltips: false,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        elements: {
+                            rectangle: {
+                                backgroundColor: colorize.bind(null, false),
+                                borderColor: colorize.bind(null, true),
+                                borderWidth: 2
+                            }
+                        },
+                        title: {
+                            display: true,
+                            position: 'top',
+                            fontColor: 'white',
+                            fontSize: 18,
+                            text: "One-way Commute Distance (miles)"
+                        },
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    beginAtZero: "true",
+                                    fontColor: "white",
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: "true",
+                                    fontColor: "white",
+                                }
+                            }]
+                        },
+                    };
+
+                    var chart1 = new Chart('homecharts1', {
+                        type: 'bar',
+                        data: data1,
+                        options: options1
+                    });
+                </script>
+                <script id="chart2">
+                    var utils = Samples.utils;
+
+                    function colorize(opaque, ctx) {
+                        var v = ctx.dataset.data[ctx.dataIndex];
+                        var c = v <= 25 ? '#44DE28' :
+                            v <= 35 ? '#0358B6' :
+                            v <= 45 ? '#F46300' :
+                            '#D60000';
+
+                        return opaque ? c : utils.transparentize(c, 1 - Math.abs(v / 45));
+                    }
+                    var data2 = {
+                        labels: ['Bicycle', 'SacRT', 'Rideshare', 'SOV', 'MOV', 'Motorcycle', 'Walking'],
+                        datasets: [{
+                            label: 'Minutes',
+                            data: times
+                        }]
+                    };
+                    var options2 = {
+                        legend: false,
+                        tooltips: true,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        elements: {
+                            rectangle: {
+                                backgroundColor: colorize.bind(null, false),
+                                borderColor: colorize.bind(null, true),
+                                borderWidth: 2
+                            }
+                        },
+                        title: {
+                            display: true,
+                            position: 'top',
+                            fontColor: 'white',
+                            fontSize: 18,
+                            text: "One-way Commute Time (minutes)"
+                        },
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    beginAtZero: "true",
+                                    fontColor: "white",
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: "true",
+                                    fontColor: "white",
+                                }
+                            }]
+                        },
+
+                    };
+                    var chart2 = new Chart('homecharts2', {
+                        type: 'bar',
+                        data: data2,
+                        options: options2
+                    });
+                </script>
+                <script id="chart3">
+                    var utils = Samples.utils;
+
+                    function colorize(opaque, ctx) {
+                        var v = ctx.dataset.data[ctx.dataIndex];
+                        var c = v <= 200 ? '#44DE28' :
+                            v <= 500 ? '#0358B6' :
+                            v <= 1000 ? '#F46300' :
+                            '#D60000';
+
+                        return opaque ? c : utils.transparentize(c, 1 - Math.abs(v / 500));
+                    }
+                    var data3 = {
+                        labels: ['Bicycle', 'SacRT', 'Rideshare', 'SOV', 'MOV', 'Motorcycle', 'Walking'],
+                        datasets: [{
+                            label: 'Cost',
+                            data: costs
+                        }]
+                    };
+                    var options3 = {
+                        legend: false,
+                        tooltips: false,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        elements: {
+                            rectangle: {
+                                backgroundColor: colorize.bind(null, false),
+                                borderColor: colorize.bind(null, true),
+                                borderWidth: 2
+                            }
+                        },
+                        title: {
+                            display: true,
+                            position: 'top',
+                            fontColor: 'white',
+                            fontSize: 18,
+                            text: "Cost per Semester (Dollars)"
+                        },
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    beginAtZero: "true",
+                                    fontColor: "white",
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: "true",
+                                    fontColor: "white",
+                                }
+                            }]
+                        },
+
+                    };
+                    var chart3 = new Chart('homecharts3', {
+                        type: 'bar',
+                        data: data3,
+                        options: options3
+                    });
+                </script>
+                <script>
+                    function refresh(chart) {
+                        chart.update();
+                    }
+                </script>
+            </div>
+            <div id="survey" style="width:100%; text-align:center;">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfny5Ydkl0816i_6m_W8sUQpqeQ_8Gh5DQW_XNKDJDyLgUw3Q/viewform?embedded=true"
+                    width="640" height="482" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+        <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script crossorigin="anonymous"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" type="text/javascript">
+        </script>
+        <script src="https://www.csus.edu/newcsus2019-global-assets/_internal/js/events-feed.js" type="text/javascript">
+        </script>
+
+
+        <footer aria-labelledby="footer-extras" class="footer vcard" id="csus-global-footer"
+            style="position: absolute; width: 100%">
+            <div class="container-fluid">
+                <h2 aria-hidden="true" class="d-none" id="footer-extras">Campus Contact Information</h2>
+                <div class="row">
+                    <h3 aria-hidden="true" class="d-none" id="campus-social-links">Campus-Wide Social Media Navigation
+                    </h3>
+                    <ul aria-labelledby="campus-social-links" class="list-inline text-center col-md-4 order-md-2">
+                        <!-- Removed IDs for icons in favor of `a[href=*"twitter"]` etc -->
+                        <li><a class="url uid" href="https://twitter.com/sacstate">Visit Sac State at Twitter</a></li>
+                        <li><a class="url uid" href="https://www.facebook.com/sacstate">Visit Sac State at Facebook</a>
+                        </li>
+                        <li><a class="url uid" href="https://www.instagram.com/sacstate">Visit Sac State at
+                                Instagram</a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/school/sacstate">Visit Sac State at LinkedIn</a></li>
+                        <li><a class="url uid" href="https://www.flickr.com/photos/sacstate">Visit Sac State at
+                                Flickr</a>
+                        </li>
+                        <li><a class="url uid" href="https://www.youtube.com/SacStateVideo">Visit Sac State at
+                                Youtube</a>
+                        </li>
+                    </ul>
+                    <a href="https://www.csus.edu" title="Click logo to return to Sac State Home Page"> <img
+                            alt="Sac State Logo, white on dark"
+                            src="https://irt-cdn.webhost.csus.edu/cascade/csusnew2019/NewCSUS2019-global-assets/_internal/images/whitelogo-stacked.png" /></a>
+                    <address class="col-md-4 order-md-3 adr text-light" translate="no" typeof="schema:PostalAddress">
+                        <span class="organization-name org fn" property="schema:name">California State University,
+                            Sacramento</span><br /> <span class="nickname d-none">Sac State</span> <span
+                            class="street-address" property="schema:streetAddress">6000 J Street</span>, <span
+                            class="locality" property="schema:addressLocality">Sacramento</span>, <abbr class="region"
+                            property="schema:addressRegion" title="California">CA</abbr> <span class="postal-code"
+                            property="schema:postalCode">95819</span> <abbr class="country-name"
+                            property="schema:addressCountry" title="United States">USA</abbr><br />Campus Main Phone: <a
+                            class="phone" href="tel:+19162786011">(916) 278-6011</a> <span class="geo d-none"> <abbr
+                                class="latitude" title="48.816667">N 56° 38.5607423</abbr> <abbr class="longitude"
+                                title="2.366667">W 42° -121.4235885</abbr> </span></address>
+                </div>
+            </div>
+            <div aria-labelledby="compliance-links" class="container-fluid bottombar">
+                <h3 aria-hidden="true" class="d-none" id="compliance-links">Compliance Links</h3>
+                <ul class="offset-md-2" role="menu">
+                    <li role="menuitem"><a class="url uid" href="https://www2.calstate.edu/">California State
+                            University</a>
+                    </li>
+                    <li role="menuitem"><a class="url uid"
+                            href="https://www.csus.edu/compliance/index.html">Compliance</a>
+                    </li>
+                    <li role="menuitem"><a class="url uid" href="https://www.csus.edu/campus-safety/index.html">Campus
+                            Safety </a></li>
+                    <li role="menuitem"><a class="url uid"
+                            href="https://www.csus.edu/information-resources-technology/ati/accessibility-statement.html">Accessibility
+                            Statement</a></li>
+                    <li role="menuitem"><a class="url uid" href="https://www.csus.edu/title-ix/index.html">Title IX</a>
+                    </li>
+                    <li role="menuitem"><a class="url uid" href="https://www.csus.edu/comments/index.html">Comments</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
